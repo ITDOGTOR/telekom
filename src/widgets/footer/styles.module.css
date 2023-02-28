@@ -1,0 +1,167 @@
+.footer {
+  font-size: 5px;
+  line-height: 7px;
+  background-color: #272731;
+}
+
+.footer__copyright {
+  padding: 2px 0;
+  color: #c6c6c6;
+  text-align: center;
+  background-color: #000;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.footer__company {
+  color: #c6c6c6;
+}
+
+.footer__title {
+  margin-bottom: 5px;
+
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 10px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.company__text {
+  margin-bottom: 5px;
+}
+
+.company__address {
+  position: relative;
+  display: grid;
+  grid-row-gap: 6px;
+  font-style: normal;
+}
+
+.company__address::before {
+  content: "";
+
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 17px;
+
+  width: 30px;
+  height: 1px;
+
+  background-color: #fff;
+}
+
+.company__address p {
+  display: flex;
+}
+
+.company__address span {
+  margin-left: 4px;
+}
+
+.contacts__list {
+  display: grid;
+  grid-row-gap: 5px;
+}
+
+.contacts__list a {
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+  color: #fff;
+}
+
+.contacts__list a:hover {
+  text-decoration: underline;
+}
+
+.license__list {
+  display: grid;
+  grid-row-gap: 5px;
+  font-weight: 300;
+}
+
+.license__list span {
+  font-weight: 400;
+}
+
+.footer__logo {
+  display: none;
+}
+
+@media screen and (min-width: 521px) {
+  .footer {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .footer__copyright {
+    padding: 10px 0;
+  }
+
+  .footer__title {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .company__text {
+    margin-bottom: 20px;
+  }
+
+  .company__address {
+    grid-row-gap: 28px;
+  }
+
+  .company__address::before {
+    top: calc(50% - 1px);
+    left: 32px;
+    width: 122px;
+  }
+
+  .company__map-pin {
+    width: 24px;
+    height: 24px;
+  }
+
+  .company__address span {
+    margin-left: 8px;
+  }
+
+  .contacts__list {
+    grid-row-gap: 15px;
+  }
+
+  .contact__svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contacts__list a {
+    column-gap: 10px;
+  }
+
+  .license__list {
+    grid-row-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .footer__wrapper {
+    column-gap: 60px;
+    padding: 56px;
+  }
+
+  .footer__logo {
+    display: block;
+    align-self: flex-start;
+
+    width: 194px;
+    height: auto;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,84 @@
+.descMenu {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  margin-right: -14px;
+}
+
+.descMenu__list {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.06em;
+}
+
+.descMenu__item {
+  display: flex;
+
+  min-width: 100px;
+
+  background-position: center center;
+  background-size: cover;
+
+  transition: all 0.3s ease;
+}
+
+.descMenu__item--company {
+  background-image: url("../../../../assets/img/company-bg.jpg");
+}
+
+.descMenu__item--projects {
+  background-image: url("../../../../assets/img/projects-bg.jpg");
+}
+
+.descMenu__item--partners {
+  background-image: url("../../../../assets/img/partners-bg.jpg");
+}
+
+.descMenu__item--contacts {
+  background-image: url("../../../../assets/img/contacts-bg.jpg");
+}
+
+
+.descMenu__item:hover {
+  flex-grow: 1;
+  transition: all 0.2s ease;
+}
+
+.descMenu__link {
+  width: 100%;
+  padding: 35px 10px;
+  color: #fff;
+  text-align: center;
+}
+
+@media screen and (min-width: 820px) {
+  .descMenu {
+    width: 75%;
+  }
+
+  .descMenu__item {
+    min-width: 155px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .descMenu {
+    width: 68%;
+  }
+
+  .descMenu__list {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .descMenu__item {
+    min-width: 198px;
+  }
+}
+
