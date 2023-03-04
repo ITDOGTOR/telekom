@@ -1,5 +1,6 @@
 .titleSection {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 14px;
 
@@ -7,16 +8,18 @@
   align-items: flex-end;
 
   min-width: 90px;
-  height: 98px;
+  height: 120px;
   padding-bottom: 3px;
 
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 13px;
+  line-height: 17px;
+}
 
-  background-image: url("../../../assets/img/vector-title-m.svg");
-  background-repeat: no-repeat;
-  background-position: left 100%;
+.titleSection__svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 @media screen and (min-width: 521px) {
@@ -27,8 +30,6 @@
 
     font-size: 20px;
     line-height: 26px;
-
-    background-image: url("../../../assets/img/vector-title-t.svg");
   }
 }
 
@@ -42,7 +43,5 @@
 
     font-size: 30px;
     line-height: 39px;
-
-    background-image: url("../../../assets/img/vector-title-d.svg");
   }
 }

@@ -1,5 +1,6 @@
 .pageName {
   position: absolute;
+  z-index: 1;
   top: 0;
   right: 14px;
 
@@ -7,14 +8,14 @@
   align-items: flex-end;
 
   min-width: 50px;
-  height: 98px;
+  height: 120px;
   margin: 0;
   padding-bottom: 3px;
   padding-left: 6px;
 
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 10px;
+  line-height: 15px;
   text-transform: lowercase;
 
   background-image: url("../../../assets/img/vector-left-m.svg");

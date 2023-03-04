@@ -1,0 +1,180 @@
+.slide3 {
+  position: relative;
+
+  display: flex;
+  column-gap: 26px;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
+  background-image: url("../../../../assets/img/projects-page-slide-3.jpg");
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.slide3__traffic {
+  cursor: pointer;
+  width: 76px;
+  height: 74px;
+  margin-left: 27px;
+}
+
+.slide3__report {
+  display: grid;
+  grid-row-gap: 18px;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.report__text {
+  width: 230px;
+}
+
+.report__day {
+  margin-left: 12px;
+}
+
+.report__month {
+  margin-left: 16px;
+}
+
+.report__name {
+  margin-bottom: 2px;
+  text-transform: lowercase;
+}
+
+.report__dayScore {
+  position: relative;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-shadow: 0 4px 4px rgb(255 255 255 / 25%);
+}
+
+.report__monthScore {
+  position: relative;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 13px;
+  text-shadow: 0 4px 4px rgb(255 255 255 / 25%);
+}
+
+.report__score {
+  color: #7a7ed0;
+}
+
+.report__suffix {
+  position: absolute;
+  color: #fff;
+}
+
+.report__dayScore .report__suffix {
+  right: 58px;
+}
+
+.report__monthScore .report__suffix {
+  left: 70px;
+}
+
+@media screen and (min-width: 521px) {
+  .slide3 {
+    column-gap: 60px;
+  }
+
+  .slide3__traffic {
+    width: 200px;
+    height: 195px;
+    margin-left: 0;
+  }
+
+  .slide3__report {
+    grid-row-gap: 32px;
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .report__text {
+    width: 420px;
+  }
+
+  .report__day {
+    margin-left: 0;
+  }
+
+  .report__month {
+    margin-left: 26px;
+  }
+
+  .report__name {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .report__dayScore {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .report__monthScore {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .report__dayScore .report__suffix {
+    right: 104px;
+  }
+
+  .report__monthScore .report__suffix {
+    left: 138px;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .slide3 {
+    column-gap: 160px;
+  }
+
+  .slide3__traffic {
+    width: 308px;
+    height: 300px;
+    margin-top: 80px;
+  }
+
+  .slide3__report {
+    grid-row-gap: 38px;
+  }
+
+  .report__text {
+    width: 420px;
+  }
+
+  .report__dayScore {
+    min-width: 480px;
+    font-size: 60px;
+    line-height: 77px;
+  }
+
+  .report__monthScore {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .report__dayScore .report__suffix {
+    right: 10px;
+  }
+
+  .report__monthScore .report__suffix {
+    right: 114px;
+    left: auto;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .slide3 {
+    column-gap: 220px;
+  }
+}

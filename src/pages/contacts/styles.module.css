@@ -1,0 +1,21 @@
+.contacts {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: 100vh;
+
+  color: #000;
+
+  background-image: url("../../assets/img/figure-5.png");
+  background-repeat: no-repeat;
+  background-position: -134px;
+  background-size: 100% 100%;
+}
+
+.contacts__pageName {
+  color: #fff;
+}
+

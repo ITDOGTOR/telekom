@@ -9,27 +9,24 @@
 
   background-image: url("../../../../assets/img/projects-page-slide-2.jpg");
   background-position: center center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .slide2__list {
   display: grid;
   grid-row-gap: 12px;
 
-  width: 316px;
+  width: 350px;
   margin: 0 auto;
 
-  font-size: 8px;
-  line-height: 10px;
+  font-size: 11px;
+  line-height: 14px;
 }
 
 .slide2__item {
   position: relative;
-
   display: flex;
   align-items: center;
-
-  min-height: 22px;
   padding-left: 20px;
 }
 
@@ -47,12 +44,14 @@
 }
 
 @media screen and (min-width: 521px) {
+  /*
   .slide2 {
     background-image: url("../../../../assets/img/projects-figure-1.svg"), url("../../../../assets/img/projects-page-slide-2.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: auto, cover;
   }
+  */
 
   .slide2__list {
     grid-row-gap: 16px;
@@ -73,9 +72,9 @@
 }
 
 @media screen and (min-width: 820px) {
-  .slide2 {
+/*  .slide2 {
     background-size: 80%, cover;
-  }
+  }*/
 
   .slide2__list {
     grid-row-gap: 16px;
@@ -85,10 +84,10 @@
 }
 
 @media screen and (min-width: 1220px) {
-  .slide2 {
+/*  .slide2 {
     background-position: 60% 120px, center center;
     background-size: 65%, cover;
-  }
+  }*/
 
   .slide2__list {
     width: 650px;

@@ -11,22 +11,22 @@
 
 .home__title {
   position: absolute;
-  top: 48%;
+  top: 45%;
   padding: 0 14px;
 }
 
 .home__slogan {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 
-  font-size: 15px;
+  font-size: 25px;
   font-weight: 500;
-  line-height: 19px;
+  line-height: 32px;
   text-transform: uppercase;
 }
 
 .home__description {
-  font-size: 10px;
-  line-height: 13px;
+  font-size: 15px;
+  line-height: 22px;
 }
 
 @media screen and (min-width: 521px) {
@@ -34,11 +34,6 @@
     margin-bottom: 20px;
     font-size: 40px;
     line-height: 52px;
-  }
-
-  .home__description {
-    font-size: 15px;
-    line-height: 19px;
   }
 }
 

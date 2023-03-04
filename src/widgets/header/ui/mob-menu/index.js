@@ -11,18 +11,20 @@ export default function MobMenu(props) {
   return (
     <div className={cx('mobMenu')} {...props}>
       <div className={cx('mobMenu__container')}>
-        <NavLink className={getClasses} to="/company">
-          О компании
-        </NavLink>
-        <NavLink className={getClasses} to="/projects">
-          Наши решения
-        </NavLink>
-        <NavLink className={getClasses} to="/partners">
-          Партнёры
-        </NavLink>
-        <NavLink className={getClasses} to="/contacts">
-          Контакты
-        </NavLink>
+        <div className={cx('mobMenu__wrapper')}>
+          <NavLink className={getClasses} to="/company">
+            О компании
+          </NavLink>
+          <NavLink className={getClasses} to="/projects">
+            Наши решения
+          </NavLink>
+          <NavLink className={getClasses} to="/partners">
+            Партнёры
+          </NavLink>
+          <NavLink className={getClasses} to="/contacts">
+            Контакты
+          </NavLink>
+        </div>
       </div>
     </div>
   );

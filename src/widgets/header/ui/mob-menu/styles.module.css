@@ -14,18 +14,22 @@
 
 .mobMenu__container {
   display: flex;
-  flex-direction: column;
-  row-gap: 14px;
-  align-items: center;
   justify-content: center;
 
   height: 100%;
 
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 22px;
   text-transform: lowercase;
   letter-spacing: 0.06em;
+}
+
+.mobMenu__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  justify-content: center;
 }
 
 .mobMenu__link {
