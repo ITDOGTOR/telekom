@@ -51,8 +51,11 @@
 }
 
 .descMenu__link {
+  cursor: pointer;
+
   width: 100%;
   padding: 35px 10px;
+
   color: #fff;
   text-align: center;
 }

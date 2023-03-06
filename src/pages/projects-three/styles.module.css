@@ -1,28 +1,64 @@
-.slide3 {
+.projectsThree {
   position: relative;
 
+  overflow: hidden;
   display: flex;
   column-gap: 26px;
   align-items: center;
   justify-content: center;
 
   height: 100vh;
-
-  background-image: url("../../../../assets/img/projects-page-slide-3.jpg");
-  background-position: center center;
-  background-size: 100% 100%;
 }
 
-.slide3__traffic {
+.projectsThree__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: perspective(200px) translateZ(24px);
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  background-image: url("../../assets/img/projects-page-slide-3.jpg");
+  background-position: center center;
+  background-size: 100% 100%;
+
+  transition: transform 0.5s, opacity 2s ease-out;
+}
+
+.projectsThree--active .projectsThree__bg {
+  transform: perspective(200px) translateZ(0);
+  opacity: 1;
+  transition: transform 3s ease-out, opacity 3s ease-out;
+}
+
+.projectsThree__figure {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../../assets/img/figure-3.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.projectsThree__traffic {
   cursor: pointer;
   width: 76px;
   height: 74px;
   margin-left: 27px;
 }
 
-.slide3__report {
+.projectsThree__report {
+  z-index: 1;
+
   display: grid;
   grid-row-gap: 18px;
+
   font-size: 10px;
   line-height: 13px;
 }
@@ -80,17 +116,17 @@
 }
 
 @media screen and (min-width: 521px) {
-  .slide3 {
+  .projectsThree {
     column-gap: 60px;
   }
 
-  .slide3__traffic {
+  .projectsThree__traffic {
     width: 200px;
     height: 195px;
     margin-left: 0;
   }
 
-  .slide3__report {
+  .projectsThree__report {
     grid-row-gap: 32px;
     font-size: 15px;
     line-height: 19px;
@@ -134,17 +170,22 @@
 }
 
 @media screen and (min-width: 961px) {
-  .slide3 {
+  .projectsThree {
     column-gap: 160px;
   }
 
-  .slide3__traffic {
+  .projectsThree__figure {
+    background-position: 580px 120px;
+    background-size: 60%;
+  }
+
+  .projectsThree__traffic {
     width: 308px;
     height: 300px;
     margin-top: 80px;
   }
 
-  .slide3__report {
+  .projectsThree__report {
     grid-row-gap: 38px;
   }
 
@@ -174,7 +215,7 @@
 }
 
 @media screen and (min-width: 1220px) {
-  .slide3 {
+  .projectsThree {
     column-gap: 220px;
   }
 }

@@ -6,11 +6,14 @@ import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
-export default function Company() {
+export default function Company({isActive}) {
   return (
-    <section className={cx('company')}>
+    <section className={cx('company', isActive && 'company--active')}>
       <TitleSection>Телеком Тим</TitleSection>
       <PageName>О компании</PageName>
+
+      <div className={cx('company__bg')}></div>
+      <div className={cx('company__figure')}></div>
 
       <ul className={cx('company__list')}>
         <li className={cx('company__item')}>

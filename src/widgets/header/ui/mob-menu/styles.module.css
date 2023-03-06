@@ -39,10 +39,11 @@
 
 .mobMenu__link:hover,
 .mobMenu__link:focus {
-  color: #7A7ED0;
+  color: #7a7ed0;
 }
 
 .mobMenu__link--active {
+  color: #7a7ed0;
   text-decoration: underline;
 }
 

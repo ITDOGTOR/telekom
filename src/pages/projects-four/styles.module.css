@@ -1,4 +1,4 @@
-.slide4 {
+.projectsFour {
   position: relative;
   z-index: 2;
 
@@ -8,13 +8,13 @@
 
   height: 100vh;
 
-  background-image: url("../../../../assets/img/figure-4.svg"), url("../../../../assets/img/projects-page-silde-4.jpg");
+  background-image: url("../../assets/img/figure-4.svg"), url("../../assets/img/projects-page-silde-4.jpg");
   background-repeat: no-repeat;
   background-position: left 150px, center center;
   background-size: 185px 140px, cover;
 }
 
-.slide4__wrapper {
+.projectsFour__wrapper {
   display: grid;
   grid-row-gap: 30px;
 
@@ -25,7 +25,7 @@
   line-height: 13px;
 }
 
-.slide4__videoFragment {
+.projectsFour__videoFragment {
   width: 150px;
   height: 92px;
   margin-top: 160px;
@@ -33,26 +33,26 @@
 }
 
 @media screen and (min-width: 521px){
-  .slide4__wrapper {
+  .projectsFour__wrapper {
     width: 300px;
     font-size: 12px;
     line-height: 15px;
   }
 
-  .slide4__videoFragment {
+  .projectsFour__videoFragment {
     width: 150px;
     height: 92px;
   }
 }
 
 @media screen and (min-width: 820px) {
-  .slide4 {
-    background-image: url("../../../../assets/img/projects-page-silde-4.jpg");
+  .projectsFour {
+    background-image: url("../../assets/img/projects-page-silde-4.jpg");
     background-position: center center;
     background-size: cover;
   }
 
-  .slide4__wrapper {
+  .projectsFour__wrapper {
     align-content: center;
     align-self: flex-start;
 
@@ -62,11 +62,11 @@
     margin-bottom: 0;
     padding-left: 70px;
 
-    background-image: url("../../../../assets/img/figure-4.svg");
+    background-image: url("../../assets/img/figure-4.svg");
     background-size: 100% 100%;
   }
 
-  .slide4__videoFragment {
+  .projectsFour__videoFragment {
     align-self: flex-end;
 
     width: 350px;
@@ -77,13 +77,13 @@
 }
 
 @media screen and (min-width: 961px) {
-  .slide4 {
+  .projectsFour {
     column-gap: 90px;
     justify-content: space-between;
     background-size: 100% 100%;
   }
 
-  .slide4__wrapper {
+  .projectsFour__wrapper {
     width: 509px;
     height: 400px;
     margin-top: 100px;
@@ -93,7 +93,7 @@
     line-height: 19px;
   }
 
-  .slide4__videoFragment {
+  .projectsFour__videoFragment {
     width: 560px;
     height: 300px;
     margin: 0 auto 90px;

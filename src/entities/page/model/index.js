@@ -1,0 +1,13 @@
+export const PAGES_COUNT = 9;
+
+export const Pages = {
+  HOME: 0,
+  COMPANY: 1,
+  PROJECTS_ONE: 2,
+  PROJECTS_TWO: 3,
+  PROJECTS_THREE: 4,
+  PROJECTS_FOUR: 5,
+  PARTNERS: 6,
+  CONTACTS: 7,
+  MAP_OFFICES: 8,
+};

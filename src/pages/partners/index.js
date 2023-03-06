@@ -10,9 +10,9 @@ import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
-export default function Partners() {
+export default function Partners({isActive}) {
   return (
-    <section className={cx('partners')}>
+    <section className={cx('partners', isActive && 'partners--active')}>
       <div className={cx('partners__bgFigure')} />
 
       <TitleSection>

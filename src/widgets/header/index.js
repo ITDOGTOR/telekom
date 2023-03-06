@@ -1,7 +1,7 @@
 import {ReactComponent as Logo} from 'assets/img/logo.svg';
 import classNames from 'classnames/bind';
+import {Pages} from 'entities/page/model';
 import {useState} from 'react';
-import {NavLink} from 'react-router-dom';
 import {useMediaQuery} from 'shared/hooks/useMediaQuery';
 
 import styles from './styles.module.css';
@@ -10,18 +10,28 @@ import MobMenu from './ui/mob-menu';
 
 const cx = classNames.bind(styles);
 
-export default function Header() {
+export default function Header({setPage, pageNumber}) {
   const [isVisibleMobMenu, setIsVisibleMobMenu] = useState(false);
 
   const [isMobile] = useMediaQuery();
 
   const toggleMobMenu = () => setIsVisibleMobMenu(!isVisibleMobMenu);
 
+  const onClickLogo = () => {
+    setPage(Pages.HOME);
+  };
+
+  const setPageNumber = (number) => {
+    toggleMobMenu();
+    setPage(number);
+  };
+
   return (
     <header className={cx('header')}>
-      <NavLink className={cx('header__logo')} to="/">
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+      <a className={cx('header__logo')} onClick={onClickLogo}>
         <Logo />
-      </NavLink>
+      </a>
 
       {isMobile ? (
         <>
@@ -35,10 +45,10 @@ export default function Header() {
             <span></span>
           </button>
 
-          <MobMenu style={isVisibleMobMenu ? {top: '0'} : {}} />
+          <MobMenu pageNumber={pageNumber} setPage={setPageNumber} style={isVisibleMobMenu ? {top: '0'} : {}} />
         </>
       ) : (
-        <DescMenu />
+        <DescMenu pageNumber={pageNumber} setPage={setPage} />
       )}
     </header>
   );

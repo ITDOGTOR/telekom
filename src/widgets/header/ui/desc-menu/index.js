@@ -1,33 +1,39 @@
 import classNames from 'classnames/bind';
-import {NavLink} from 'react-router-dom';
+import {Pages} from 'entities/page/model';
 
 import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
-export default function DescMenu() {
+export default function DescMenu({setPage, pageNumber}) {
+  const activeClass = (page) => (pageNumber === page ? 'descMenu__link--active' : '');
+
   return (
     <nav className={cx('descMenu')}>
       <ul className={cx('descMenu__list')}>
         <li className={cx('descMenu__item', 'descMenu__item--company')}>
-          <NavLink className={cx('descMenu__link')} to="/company">
+          <a href onClick={() => setPage(Pages.COMPANY)} className={cx('descMenu__link', activeClass(Pages.COMPANY))}>
             О компании
-          </NavLink>
+          </a>
         </li>
         <li className={cx('descMenu__item', 'descMenu__item--projects')}>
-          <NavLink className={cx('descMenu__link')} to="/projects">
+          <a
+            href
+            onClick={() => setPage(Pages.PROJECTS_ONE)}
+            className={cx('descMenu__link', activeClass(Pages.PROJECTS_ONE))}
+          >
             Наши решения
-          </NavLink>
+          </a>
         </li>
         <li className={cx('descMenu__item', 'descMenu__item--partners')}>
-          <NavLink className={cx('descMenu__link')} to="/partners">
+          <a href onClick={() => setPage(Pages.PARTNERS)} className={cx('descMenu__link', activeClass(Pages.PARTNERS))}>
             Партнеры
-          </NavLink>
+          </a>
         </li>
         <li className={cx('descMenu__item', 'descMenu__item--contacts')}>
-          <NavLink className={cx('descMenu__link')} to="/contacts">
+          <a href onClick={() => setPage(Pages.CONTACTS)} className={cx('descMenu__link', activeClass(Pages.CONTACTS))}>
             Контакты
-          </NavLink>
+          </a>
         </li>
       </ul>
     </nav>

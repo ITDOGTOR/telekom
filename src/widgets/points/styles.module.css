@@ -1,0 +1,26 @@
+.points {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 25px;
+
+  height: 100vh;
+}
+
+.points__list {
+  position: absolute;
+  top: calc(50% - 132px);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.points__item--active {
+  color: #7a7ed0;
+}
+
+.points svg {
+  width: 12px;
+  height: auto;
+}

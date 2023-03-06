@@ -8,9 +8,9 @@ import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
-export default function Footer() {
+export default function Footer({currentRef}) {
   return (
-    <footer className={cx('footer')}>
+    <footer ref={currentRef} className={cx('footer')}>
       <div className={cx('footer__wrapper')}>
         <div className={cx('footer__company')}>
           <p className={cx('footer__title')}>О компании</p>
@@ -82,7 +82,7 @@ export default function Footer() {
         <Logo className={cx('footer__logo')} />
       </div>
 
-      <p className={cx('footer__copyright')}>© 2023 ООО "Телеком Тим"</p>
+      <p className={cx('footer__copyright')}>© {new Date().getFullYear()} ООО "Телеком Тим"</p>
     </footer>
   );
 }

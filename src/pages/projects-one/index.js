@@ -6,18 +6,20 @@ import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
-export default function Slide1() {
+export default function ProjectsOne({isActive}) {
   const [activeCard, setActiveCard] = useState(null);
 
   const onActiveCard = (numberCard) => () => setActiveCard(numberCard === activeCard ? false : numberCard);
   const getClassesActiveCard = (numberCard) => ['scene__card--active', `scene__card--active-${numberCard}`];
 
   return (
-    <section className={cx('slide1')}>
+    <section className={cx('projectsOne', isActive && 'projectsOne--active')}>
       <PageName>Наши решения</PageName>
 
-      <div className={cx('slide1__wrapper')}>
-        <div className={cx('slide1__scene')}>
+      <div className={cx('projectsOne__bg')}></div>
+
+      <div className={cx('projectsOne__wrapper')}>
+        <div className={cx('projectsOne__scene')}>
           <div
             className={cx('scene__card', activeCard === 1 && getClassesActiveCard(activeCard))}
             onClick={onActiveCard(1)}
@@ -33,7 +35,7 @@ export default function Slide1() {
           </div>
         </div>
 
-        <div className={cx('slide1__scene')}>
+        <div className={cx('projectsOne__scene')}>
           <div
             className={cx('scene__card', activeCard === 2 && getClassesActiveCard(activeCard))}
             onClick={onActiveCard(2)}
@@ -49,7 +51,7 @@ export default function Slide1() {
           </div>
         </div>
 
-        <div className={cx('slide1__scene')}>
+        <div className={cx('projectsOne__scene')}>
           <div
             className={cx('scene__card', activeCard === 3 && getClassesActiveCard(activeCard))}
             onClick={onActiveCard(3)}
@@ -66,7 +68,7 @@ export default function Slide1() {
           </div>
         </div>
 
-        <div className={cx('slide1__scene')}>
+        <div className={cx('projectsOne__scene')}>
           <div
             className={cx('scene__card', activeCard === 4 && getClassesActiveCard(activeCard))}
             onClick={onActiveCard(4)}

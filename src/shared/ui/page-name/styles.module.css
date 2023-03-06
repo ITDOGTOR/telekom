@@ -2,7 +2,7 @@
   position: absolute;
   z-index: 1;
   top: 0;
-  right: 14px;
+  right: 22px;
 
   display: flex;
   align-items: flex-end;
@@ -25,6 +25,8 @@
 
 @media screen and (min-width: 521px) {
   .pageName {
+    right: 70px;
+
     min-width: 116px;
     height: 145px;
     padding-bottom: 6px;

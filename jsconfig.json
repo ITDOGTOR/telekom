@@ -4,10 +4,11 @@
     "allowSyntheticDefaultImports": false,
     "baseUrl": "src",
     "paths": {
-      "shared/*": ["shared/*"],
+      "app/*": ["app/*"],
       "pages/*": ["pages/*"],
       "widgets/*": ["widgets/*"],
-      "app/*": ["app/*"],
+      "entities/*": ["entities/*"],
+      "shared/*": ["shared/*"],
       "assets/*": ["assets/*"]
     }
   },

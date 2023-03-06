@@ -6,12 +6,12 @@ import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
-export default function Slide4() {
+export default function ProjectsFour() {
   return (
-    <section className={cx('slide4')}>
+    <section className={cx('projectsFour')}>
       <PageName>Наши решения</PageName>
 
-      <div className={cx('slide4__wrapper')}>
+      <div className={cx('projectsFour__wrapper')}>
         <p>
           Пешеходные переходы — идеальные места для <br /> размещения камер в целях распознавания лиц.
         </p>
@@ -21,7 +21,7 @@ export default function Slide4() {
         </p>
       </div>
 
-      <video className={cx('slide4__videoFragment')} controls>
+      <video className={cx('projectsFour__videoFragment')} controls>
         <source src={IntroSrc} type="video/mp4" />
       </video>
     </section>

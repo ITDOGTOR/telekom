@@ -1,29 +1,36 @@
 import classNames from 'classnames/bind';
-import {NavLink} from 'react-router-dom';
+import {Pages} from 'entities/page/model';
 
 import styles from './styles.module.css';
 
 const cx = classNames.bind(styles);
 
-export default function MobMenu(props) {
-  const getClasses = ({isActive}) => cx('mobMenu__link', isActive && 'mobMenu__link--active');
+export default function MobMenu({setPage, pageNumber, style}) {
+  const activeClass = (page) => (pageNumber === page ? 'mobMenu__link--active' : '');
 
   return (
-    <div className={cx('mobMenu')} {...props}>
+    <div className={cx('mobMenu')} style={style}>
       <div className={cx('mobMenu__container')}>
         <div className={cx('mobMenu__wrapper')}>
-          <NavLink className={getClasses} to="/company">
+          <a href onClick={() => setPage(Pages.COMPANY)} className={cx('mobMenu__link', activeClass(Pages.COMPANY))}>
             О компании
-          </NavLink>
-          <NavLink className={getClasses} to="/projects">
+          </a>
+          <a
+            href
+            onClick={() => setPage(Pages.PROJECTS_ONE)}
+            className={cx(
+              'mobMenu__link',
+              pageNumber >= Pages.PROJECTS_ONE && pageNumber <= Pages.PROJECTS_FOUR && 'mobMenu__link--active',
+            )}
+          >
             Наши решения
-          </NavLink>
-          <NavLink className={getClasses} to="/partners">
+          </a>
+          <a href onClick={() => setPage(Pages.PARTNERS)} className={cx('mobMenu__link', activeClass(Pages.PARTNERS))}>
             Партнёры
-          </NavLink>
-          <NavLink className={getClasses} to="/contacts">
+          </a>
+          <a href onClick={() => setPage(Pages.CONTACTS)} className={cx('mobMenu__link', activeClass(Pages.CONTACTS))}>
             Контакты
-          </NavLink>
+          </a>
         </div>
       </div>
     </div>

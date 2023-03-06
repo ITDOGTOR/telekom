@@ -1,3 +1,8 @@
+.page__container {
+  will-change: transform;
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .layout {
   display: grid;
 }
