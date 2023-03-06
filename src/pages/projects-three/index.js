@@ -45,7 +45,7 @@ export default function ProjectsThree({isActive}) {
           <p className={cx('report__name')}>В месяц</p>
           <p className={cx(cx('report__monthScore'))}>
             <span className={cx('report__score')}>
-              {isActive ? <CountUp isCounting end={694000000} duration={3} thousandsSeparator="," /> : 0}
+              {isActive ? <CountUp isCounting end={694000000} duration={2} thousandsSeparator="," /> : 0}
             </span>{' '}
             <span className={cx('report__suffix')}>MB</span>
           </p>

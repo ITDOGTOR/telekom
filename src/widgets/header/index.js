@@ -1,6 +1,6 @@
 import {ReactComponent as Logo} from 'assets/img/logo.svg';
 import classNames from 'classnames/bind';
-import {Pages} from 'entities/page/model';
+import {Pages, PAGES_COUNT} from 'entities/page/model';
 import {useState} from 'react';
 import {useMediaQuery} from 'shared/hooks/useMediaQuery';
 
@@ -26,10 +26,12 @@ export default function Header({setPage, pageNumber}) {
     setPage(number);
   };
 
+  const isBlackLogo = pageNumber === Pages.CONTACTS || pageNumber === Pages.MAP_OFFICES || pageNumber === PAGES_COUNT;
+
   return (
     <header className={cx('header')}>
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-      <a className={cx('header__logo')} onClick={onClickLogo}>
+      <a className={cx('header__logo', isBlackLogo && 'header__logo--black')} onClick={onClickLogo}>
         <Logo />
       </a>
 

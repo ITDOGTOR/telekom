@@ -8,16 +8,25 @@ const cx = classNames.bind(styles);
 export default function MobMenu({setPage, pageNumber, style}) {
   const activeClass = (page) => (pageNumber === page ? 'mobMenu__link--active' : '');
 
+  const onSetPage = (evt, page) => {
+    evt.preventDefault();
+    setPage(page);
+  };
+
   return (
     <div className={cx('mobMenu')} style={style}>
       <div className={cx('mobMenu__container')}>
         <div className={cx('mobMenu__wrapper')}>
-          <a href onClick={() => setPage(Pages.COMPANY)} className={cx('mobMenu__link', activeClass(Pages.COMPANY))}>
+          <a
+            href=""
+            onClick={(evt) => onSetPage(evt, Pages.COMPANY)}
+            className={cx('mobMenu__link', activeClass(Pages.COMPANY))}
+          >
             О компании
           </a>
           <a
-            href
-            onClick={() => setPage(Pages.PROJECTS_ONE)}
+            href=""
+            onClick={(evt) => onSetPage(evt, Pages.PROJECTS_ONE)}
             className={cx(
               'mobMenu__link',
               pageNumber >= Pages.PROJECTS_ONE && pageNumber <= Pages.PROJECTS_FOUR && 'mobMenu__link--active',
@@ -25,10 +34,18 @@ export default function MobMenu({setPage, pageNumber, style}) {
           >
             Наши решения
           </a>
-          <a href onClick={() => setPage(Pages.PARTNERS)} className={cx('mobMenu__link', activeClass(Pages.PARTNERS))}>
+          <a
+            href=""
+            onClick={(evt) => onSetPage(evt, Pages.PARTNERS)}
+            className={cx('mobMenu__link', activeClass(Pages.PARTNERS))}
+          >
             Партнёры
           </a>
-          <a href onClick={() => setPage(Pages.CONTACTS)} className={cx('mobMenu__link', activeClass(Pages.CONTACTS))}>
+          <a
+            href=""
+            onClick={(evt) => onSetPage(evt, Pages.CONTACTS)}
+            className={cx('mobMenu__link', activeClass(Pages.CONTACTS))}
+          >
             Контакты
           </a>
         </div>

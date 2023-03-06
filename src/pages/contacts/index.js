@@ -83,7 +83,6 @@ export default function Contacts({isActive}) {
 
         <Controller
           control={control}
-          defaultValue=""
           name="fio"
           render={({field, fieldState: {error}, formState}) => (
             <input
@@ -101,7 +100,6 @@ export default function Contacts({isActive}) {
 
         <Controller
           control={control}
-          defaultValue=""
           name="email"
           render={({field, fieldState: {error}, formState}) => (
             <input
@@ -119,7 +117,6 @@ export default function Contacts({isActive}) {
 
         <Controller
           control={control}
-          defaultValue=""
           name="phone"
           render={({field, formState}) => (
             <input
@@ -135,7 +132,6 @@ export default function Contacts({isActive}) {
 
         <Controller
           control={control}
-          defaultValue=""
           name="message"
           render={({field, fieldState: {error}, formState}) => (
             <textarea

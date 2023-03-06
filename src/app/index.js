@@ -25,10 +25,12 @@ export default function App() {
       ? -window.innerHeight * (pageNumber - 1) - footerRef.current.offsetHeight
       : -window.innerHeight * pageNumber;
 
+  const isPointsVisible = pageNumber >= Pages.COMPANY && pageNumber < Pages.MAP_OFFICES;
+
   return (
     <div className="page" onWheel={wheel} onTouchEnd={touchEnd} onTouchStart={touchStart}>
       <Header pageNumber={pageNumber} setPage={setPageNumber} />
-      <Points setPage={setPageNumber} pageNumber={pageNumber} />
+      {isPointsVisible && <Points setPage={setPageNumber} pageNumber={pageNumber} />}
 
       <Layout style={{transform: `translateY(${position}px)`}} footer={<Footer currentRef={footerRef} />}>
         <Home />

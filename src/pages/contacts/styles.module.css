@@ -286,6 +286,8 @@
     max-width: 800px;
     margin-bottom: 0;
     padding-left: 118px;
+
+    background-color: transparent;
   }
 }
 

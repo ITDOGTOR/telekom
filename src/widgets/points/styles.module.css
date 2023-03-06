@@ -4,7 +4,24 @@
   top: 0;
   right: 25px;
 
+  display: flex;
+  justify-content: flex-start;
+
   height: 100vh;
+}
+
+.points__vector {
+  position: absolute;
+}
+
+.points__vector--top {
+  display: none;
+  top: 0;
+}
+
+.points__vector--bottom {
+  right: -9px;
+  bottom: 0;
 }
 
 .points__list {
@@ -16,11 +33,31 @@
   row-gap: 16px;
 }
 
+.points__item {
+  color: #fff;
+}
+
 .points__item--active {
   color: #7a7ed0;
 }
 
-.points svg {
+.points__pointSvg {
   width: 12px;
   height: auto;
+}
+
+@media screen and (min-width: 521px) {
+  .points {
+    right: 82px;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .points {
+    right: 142px;
+  }
+
+  .points__vector--top {
+    display: block;
+  }
 }

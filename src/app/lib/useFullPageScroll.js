@@ -7,12 +7,11 @@ export const useFullPageScroll = () => {
   const [moveX, setMoveX] = useState(0);
   const [wheelDelayTimerId, setWheelDelayTimerId] = useState(-1);
 
-  console.log(pageNumber);
-
   const wheel = (event) => {
     if (wheelDelayTimerId !== -1) {
       return;
     }
+
     setWheelDelayTimerId(setTimeout(() => setWheelDelayTimerId(-1), 500));
 
     if (event.deltaY > 0 && pageNumber < PAGES_COUNT) {
