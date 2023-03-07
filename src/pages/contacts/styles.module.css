@@ -173,7 +173,7 @@
 @media screen and (min-width: 521px) {
   .contacts {
     flex-wrap: wrap;
-    row-gap: 60px;
+    row-gap: 34px;
     align-content: center;
     background-position: -120px;
   }

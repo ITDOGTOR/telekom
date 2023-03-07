@@ -78,7 +78,7 @@
 
 @media screen and (min-width: 961px) {
   .projectsFour {
-    column-gap: 90px;
+    column-gap: 60px;
     justify-content: space-between;
     background-size: 100% 100%;
   }

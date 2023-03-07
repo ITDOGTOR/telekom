@@ -66,7 +66,7 @@
 
 @media screen and (min-width: 820px) {
   .partners__list {
-    grid-gap: 50px 134px;
+    grid-gap: 44px 134px;
     margin-top: 50px;
     font-size: 14px;
     line-height: 18px;

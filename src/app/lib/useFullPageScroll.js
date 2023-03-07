@@ -12,7 +12,7 @@ export const useFullPageScroll = () => {
       return;
     }
 
-    setWheelDelayTimerId(setTimeout(() => setWheelDelayTimerId(-1), 500));
+    setWheelDelayTimerId(setTimeout(() => setWheelDelayTimerId(-1), 1000));
 
     if (event.deltaY > 0 && pageNumber < PAGES_COUNT) {
       setPageNumber(pageNumber + 1);
